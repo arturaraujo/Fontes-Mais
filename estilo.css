@@ -1,0 +1,42 @@
+body{
+	padding: 3%;
+}
+header{
+	background-color: #CCFFD4;
+	padding: 45px;
+	padding-left: 55px;
+}
+header a{
+	text-decoration: none;
+	font-family: "Patrick Hand SC";
+	color: red;
+	font-size: 60px;
+}
+nav {
+	background-color: #A3D1FF;
+}
+nav ul {
+	list-style-type: none;
+}
+nav ul li {
+	display: inline;
+	padding-left: 45px;
+	padding-right: 45px;
+}
+nav ul li:hover {
+	background-color: #ccc;
+}
+nav ul li a {
+	text-decoration: none;
+	font-family: "Patrick Hand SC";
+	color:black;
+	font-size: 20px;
+}
+body{
+	background-image: url('fonts.jpg');
+}
+footer {
+	text-align: center;
+	background-color: #A3D1FF;
+	margin-top: 40px;
+}

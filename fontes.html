@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Fontes Mais - Ordem Alfabética</title>
+
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	<script src="JS\jquery.autoscroll.packed.js"></script>
+
+	<!--Fontes em ordem alfabetica-->
+
+	<link href='http://fonts.googleapis.com/css?family=Aguafina+Script' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Bigelow+Rules' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Crafty+Girls' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Dawning+of+a+New+Day' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Eater' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Flavors' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Patrick+Hand+SC' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Raleway+Dots' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=UnifrakturCook:700' rel='stylesheet' type='text/css'>
+	
+	
+	<link href="fontes.css" rel="stylesheet" type='text/css'>
+	<link href='estilo.css' rel='stylesheet' type='text/css'>
+	<style>
+		table, tr td, tr th{
+			border-radius: 3px;
+		}
+		table{
+			width: 75%;
+			padding: 7px;
+			margin-top: 30px;
+		}
+		div p{
+			text-align: center;
+			font-size: 37px;
+			font-family: "Patrick Hand SC";
+		}
+		p {
+			text-align: center;
+			font-size: 20px;
+			font-family: "Patrick Hand SC";
+		}
+		td, th{
+			font-size: 30px;
+			padding: 2px 8px;
+		}
+		th {
+			color:#0D3B1D;
+			font-family: "Patrick Hand SC";
+		}
+		tr:nth-child(even) a{
+			color:#0080FF;
+		}
+		tr:nth-child(odd) a, td a{
+			color:#FF7700;
+		}
+		td a {
+			text-decoration: none;
+		}
+		input[type^=radio] {
+			margin-right: 15px;
+		}
+		textarea {
+			width: 500px;
+			height: 115px;
+			display: block;
+			margin-left: auto;			
+		    margin-right: auto;
+		    text-align: center;
+			font-size: 40px;
+			font-family: "Patrick Hand SC";
+			padding: 5px 0px 5px 10px;
+			border-radius: 10px;
+		}
+		.option {
+			margin-left: auto;
+		    margin-right: auto;
+		}
+	</style>
+</head>
+<body>
+	<header><a href="site.html">Fontes Mais</a>
+	</header>
+	<nav>
+		<ul>
+			<li><a href="site.html">Início</a></li>
+			<li><a href="fontes.html">Fontes</a></li>
+			<li><a href="contato.html">Contato</a></li>
+			<li><a href="pedidos.html">Pedidos de fontes</a></li>
+		</ul>
+	</nav>
+	<div>
+		<p>Listagem em ordem alfabética de nossas fontes. Clique em uma para utilizar:</p>
+	</div>
+
+	<p>Voce sera redirecionado para o site Google Fonts. Copie e cole o código de seu interesse no seu site</p>
+	<textarea id="demo" onmouseover="adjust()" onmouseout="adjust()">Digite Algum texto</textarea><br>
+
+	<div id="option">
+		<input type="checkbox" class="options" onclick="bold()">Negrito
+		<input type="checkbox" class="options" onclick="under()">Sublinhado
+		<input type="checkbox" class="options" onclick="italic()">Itálico
+	</div>
+
+	<table border="1">
+		<tr>
+			<th>
+				Fonte
+			</th>
+		</tr>
+		<tr>
+			<td><input type="radio" name="font" class="fontes"><a href="http://www.google.com/fonts#QuickUsePlace:quickUse/Family:Abril+Fatface" class="Aguafina" target="_blank">Aguafina Script</a></td>
+		</tr>
+		<tr>
+			<td><input type="radio" name="font" class="fontes"><a href="http://www.google.com/fonts#QuickUsePlace:quickUse/Family:Bigelow+Rules" class="Bigelow" target="_blank">Bigelow Rules</a></td>
+		</tr>
+		<tr>
+			<td><input type="radio" name="font" class="fontes"><a href="http://www.google.com/fonts#QuickUsePlace:quickUse/Family:Crafty+Girls" class="Crafty" target="_blank">Crafty Girls</a></td>
+		</tr>
+		<tr>
+			<td><input type="radio" name="font" class="fontes"><a href="http://www.google.com/fonts/#QuickUsePlace:quickUse/Family:Dawning+of+a+New+Day" class="Dawning" target="_blank">Dawning of a New Day</a></td>
+		</tr>
+		<tr>
+			<td><input type="radio" name="font" class="fontes"><a href="http://www.google.com/fonts#QuickUsePlace:quickUse/Family:Eater" class="Eater" target="_blank">Eater</a></td>
+		</tr>
+		<tr>
+			<td><input type="radio" name="font" class="fontes"><a href="http://www.google.com/fonts#QuickUsePlace:quickUse/Family:Flavors" class="Flavors" target="_blank">Flavors</a></td>
+		</tr>
+		<tr>
+			<td><input type="radio" name="font" class="fontes"><a href="http://www.google.com/fonts#QuickUsePlace:quickUse/Family:Lobster" class="Lobster" target="_blank">Lobster</a></td>
+		</tr>
+		<tr>
+			<td><input type="radio" name="font" class="fontes"><a href="http://www.google.com/fonts#QuickUsePlace:quickUse/Family:Open+Sans+Condensed" class="Open" target="_blank">Open Sans Condensed</a></td>
+		</tr>
+		<tr>
+			<td><input type="radio" name="font" class="fontes"><a href="http://www.google.com/fonts#QuickUsePlace:quickUse/Family:Patrick+Hand+SC" class="Patrick" target="_blank">Patrick Hand SC</a></td>
+		</tr>
+		<tr>
+			<td><input type="radio" name="font" class="fontes"><a href="http://www.google.com/fonts#QuickUsePlace:quickUse/Family:Raleway+Dots" class="Raleway" target="_blank">Raleway Dots</a></td>
+		</tr>
+		<tr>
+			<td><input type="radio" name="font" class="fontes"><a href="http://www.google.com/fonts#QuickUsePlace:quickUse/Family:UnifrakturCook:700" class="UnifrakturCook" target="_blank">UnifrakturCook</a></td>
+		</tr>
+	</table>
+	<script>
+		$.autoscroll.init();
+
+		function adjust(){
+			document.querySelector("#demo").style.marginLeft= "auto";
+		    document.querySelector("#demo").style.marginRight= "auto";
+		}
+
+		var fonts = document.getElementsByClassName("fontes");
+		for (var i in fonts){
+			fonts[i].onchange = function () {
+				document.getElementById("demo").style.fontFamily = this.parentNode.childNodes[1].innerHTML;
+				adjust();
+			}
+		}
+
+		var option = document.getElementsByClassName("options");
+		
+		function bold () {
+			if (option[0].checked == true)
+				document.querySelector("#demo").style.fontWeight = "bold";
+			else 
+				document.querySelector("#demo").style.fontWeight = "normal";
+		}
+
+		function under() {
+			if (option[1].checked == true)
+				document.querySelector("#demo").style.textDecoration = "underline";
+			else
+				document.querySelector("#demo").style.textDecoration = "none";
+		}
+
+		function italic(){
+			if (option[2].checked == true)
+				document.querySelector("#demo").style.fontStyle = "italic";
+			else
+				document.querySelector("#demo").style.fontStyle = "normal";
+		}
+	</script>
+	<footer>
+		Copyright 2013<br>
+		Developed by: Artur Benício.
+	</footer>
+</body>
+</html>

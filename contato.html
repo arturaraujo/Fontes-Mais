@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Fontes Mais - Contato</title>
+
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+	<link type="text/css" href="JS\css\jquery.toastmessage.css" rel="stylesheet"/>
+	<script src="JS\jquery.toastmessage.js"></script>
+
+	<link rel="stylesheet" href="JS\alertify.core.css">
+	<link rel="stylesheet" href="JS\alertify.default.css">
+	<script src="JS\alertify.min.js"></script>
+
+	<link href='http://fonts.googleapis.com/css?family=Patrick+Hand+SC' rel='stylesheet' type='text/css'>
+	<link href='estilo.css' rel='stylesheet' type='text/css'>
+	<style>
+		form {
+			width:40%;
+			margin-left: 30%;
+			font-size: 25px;
+			font-family: "Patrick Hand SC";
+			margin-top: 50px;
+		}
+		fieldset {
+			border-radius: 4px;
+		}
+		input:not([type=submit]), textarea {
+			width: 95%;
+			display: block;
+		}
+		input[type=submit] {
+			float: right;
+			margin-top: 8px;
+			margin-right: 15px;
+		}
+	</style>
+</head>
+<body>
+	<header><a href="site.html">Fontes Mais</a></header>
+	<nav>
+		<ul>
+			<li><a href="site.html">Início</a></li>
+			<li><a href="fontes.html">Fontes</a></li>
+			<li><a href="contato.html">Contato</a></li>
+			<li><a href="pedidos.html">Pedidos de fontes</a></li>
+		</ul>
+	</nav>
+	<form action="sucesso.html" method="post" id="form" onsubmit="return validateForm()">
+		<fieldset>
+			<legend>Fale conosco</legend>
+			<label for="nome">Nome: *</label><input type="text" id="nome" name="nome">
+			<label for="email">Email: *</label><input type="text" id="email" name="email">
+			<label for="assunto">Assunto: </label><input type="text" id="assunto">
+			<label for="msg">Mensagem: *</label><textarea name="msg" id="msg" rows="6"></textarea>
+			<input type="submit" value="Enviar">
+			(*) Campos obigatórios.
+		</fieldset>
+	</form>
+	<footer>Copyright 2013<br>
+	Developed by: Artur Benício.</footer>
+	<script>
+		function validateForm(){
+			var flag;
+			if (document.querySelector("#nome").value.length == 0){
+				showError('Preencha o campo "Nome"');
+				flag = 1;
+			}
+			var testEmail = /((\d|\w){2,}|(\d&\w){2,})@\w{3,}.\w{2,}/;
+			var email = document.querySelector("#email").value;
+			if (testEmail.test(email)==false){
+				showError('Email inválido!');
+				flag = 1;
+			}
+			if (document.querySelector("#msg").value.length == 0){
+				showError('Preencha o campo "Mensagem"');
+				flag = 1;
+			}
+			if (flag != 1)
+			alertify.confirm("Confirma o envio do formulário?", function (e) {
+				    if (e) {
+				    	document.querySelector("#form").submit();
+				    }
+				});
+			return false;
+		}
+		function showError(message) {
+			$().toastmessage('showToast', {
+		    text     : message,
+		    type     : 'error',
+		    position:  'middle-right',
+			});
+		}
+	</script>
+</body>
+</html>		
